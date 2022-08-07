@@ -23,12 +23,12 @@ def get_users_selected_option(options):
     return None
 
 def get_template_options(templates_dir):
-
     list_of_templates = os.listdir(templates_dir)
     template_options = []
 
     for template in list_of_templates:
         dir = f"{templates_dir}/{template}"
+
         if os.path.isdir(dir):
             template_options.append(template)
 
@@ -39,7 +39,7 @@ selected_index = get_users_selected_option(template_options)
 selected_template = template_options[selected_index]
 
 # Get the template to copy
-src_dir = f"templates/{selected_template}"
+src_dir = f"{templates_dir}/{selected_template}"
 dst_dir = f"{dir_to_place_template}/{name_of_files_and_folders}/"
 
 # Copy the template files to the user selected directory
