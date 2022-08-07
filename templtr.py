@@ -2,6 +2,7 @@ import os
 import shutil
 
 base_template = "BaseTemplate"
+templates_dir = "templates"
 
 print("Welcome to Templtr")
 
@@ -10,7 +11,6 @@ name_of_files_and_folders =input("What would you like to name the template direc
 
 # Get the option selected by the user
 def get_users_selected_option(options):
-
     for idx, element in enumerate(options):
         print("{}) {}".format(idx + 1, element))
 
@@ -22,7 +22,6 @@ def get_users_selected_option(options):
         pass
     return None
 
-templates_dir = "templates"
 list_of_templates = os.listdir(templates_dir)
 template_options = []
 for template in list_of_templates:
