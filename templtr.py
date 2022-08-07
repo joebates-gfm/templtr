@@ -62,7 +62,7 @@ for file in list_of_files:
             # text file
             f.write(data)
     except:
-        print("There was an error updating the file name")
+        print(f"There was an error updating {file}'s contents")
         
 
     os.rename(old_name, new_name)
