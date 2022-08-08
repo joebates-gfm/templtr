@@ -6,7 +6,7 @@ import {BaseTemplate} from "./index";
 
 const defaultProps = {};
 
-describe("apps/manage/molecules/BaseTemplate", () => {
+describe("/BaseTemplate", () => {
     it("should render BaseTemplate component", () => {
         render(<BaseTemplate {...defaultProps} />);
 
