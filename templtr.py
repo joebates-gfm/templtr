@@ -7,7 +7,22 @@ templates_dir = "templates"
 print("Welcome to Templtr")
 
 dir_to_place_template = input("Where do you want to place the template? ")
-name_of_files_and_folders =input("What would you like to name the template directory and files? ")
+
+dst_dir = None
+name_of_files_and_folders = input("What would you like to name the template directory and files? ")
+
+# Check if the directory exists
+while True:
+    dst_dir = f"{dir_to_place_template}/{name_of_files_and_folders}/"
+    print("name_of_files_and_folders", name_of_files_and_folders)
+
+    if (os.path.exists(dst_dir)):
+        name_of_files_and_folders = input(f"/{name_of_files_and_folders} directory already exists. Please choose a different name: ")
+        continue
+
+    break
+
+
 
 # Get the option selected by the user
 def get_users_selected_option(options):
@@ -40,7 +55,6 @@ selected_template = template_options[selected_index]
 
 # Get the template to copy
 src_dir = f"{templates_dir}/{selected_template}"
-dst_dir = f"{dir_to_place_template}/{name_of_files_and_folders}/"
 
 # Copy the template files to the user selected directory
 shutil.copytree(src_dir, dst_dir)
