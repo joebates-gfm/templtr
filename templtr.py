@@ -14,7 +14,6 @@ name_of_files_and_folders = input("What would you like to name the template dire
 # Check if the directory exists
 while True:
     dst_dir = f"{dir_to_place_template}/{name_of_files_and_folders}/"
-    print("name_of_files_and_folders", name_of_files_and_folders)
 
     if (os.path.exists(dst_dir)):
         name_of_files_and_folders = input(f"/{name_of_files_and_folders} directory already exists. Please choose a different name: ")
@@ -86,5 +85,3 @@ for file in list_of_files:
         
 
     os.rename(old_name, new_name)
-
-print(selected_index)
