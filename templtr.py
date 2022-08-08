@@ -21,8 +21,6 @@ while True:
 
     break
 
-
-
 # Get the option selected by the user
 def get_users_selected_option(options):
     for idx, element in enumerate(options):
