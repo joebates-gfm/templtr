@@ -2,7 +2,7 @@ import os
 import shutil
 
 base_template = "BaseTemplate"
-templates_dir = "templates"
+templates_dir = "src/templates"
 
 
 class Templatr():
