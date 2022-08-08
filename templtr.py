@@ -101,6 +101,10 @@ class Templatr():
         self.rename_copied_files(dst_dir, name_of_files_and_folders)
 
 
-templatr = Templatr()
+def main():
+    templatr = Templatr()
+    templatr.create_template()
 
-templatr.create_template()
+
+if __name__ == "__main__":
+    main()
