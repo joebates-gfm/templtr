@@ -41,11 +41,12 @@ class Templatr():
     def rename_copied_files(self, dst_dir, name_of_files_and_folders):
         list_of_files = os.listdir(dst_dir)
 
-        for file in list_of_files:
-            old_name = f"{dst_dir}{file}"
-            new_name = f"{dst_dir}{file.replace(base_template, name_of_files_and_folders)}"
+        try:
+            for file in list_of_files:
+                old_name = f"{dst_dir}{file}"
+                new_name = f"{dst_dir}{file.replace(base_template, name_of_files_and_folders)}"
 
-            try:
+                # Let's rename the contents of our files
                 with open(old_name, "r") as f:
                     data = f.read()
 
@@ -59,10 +60,14 @@ class Templatr():
                     # Writing the replaced data in our
                     # text file
                     f.write(data)
-            except:
-                print(f"There was an error updating {file}'s contents")
+                # Finally rename the base folder
+                os.rename(old_name, new_name)
 
-            os.rename(old_name, new_name)
+            # And show a success message
+            print(f"\nTemplate {name_of_files_and_folders} was successfully created at {dst_dir}")
+
+        except:
+            print("There was an error renaming the folder(s) and or file(s)")
 
     # Creates a directory and a list of files based off
     # a users selected template
