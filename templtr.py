@@ -64,7 +64,7 @@ class Templatr():
                 os.rename(old_name, new_name)
 
             # And show a success message
-            print(f"\nTemplate {name_of_files_and_folders} was successfully created at {dst_dir}")
+            print(f"\nTemplate {name_of_files_and_folders} was successfully created at {dst_dir[:-1]}")
 
         except:
             print("There was an error renaming the folder(s) and or file(s)")
