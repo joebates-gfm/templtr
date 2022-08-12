@@ -72,7 +72,7 @@ class Templatr():
     # Creates a directory and a list of files based off
     # a users selected template
     def create_template(self):
-        print("Welcome to Templtr")
+        print("Welcome to Templtr\n")
 
         dir_to_place_template = input(
             "Where do you want to place the template? ")
