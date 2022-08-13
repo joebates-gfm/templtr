@@ -37,7 +37,7 @@ class Templatr():
 
     # Get file names in the directory
     # Open and rename anything with BaseTemplate
-    # Renmae the folders
+    # Rename the folders
     def rename_copied_files(self, dst_dir, name_of_files_and_folders):
         list_of_files = os.listdir(dst_dir)
 
