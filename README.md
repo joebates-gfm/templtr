@@ -2,7 +2,7 @@
 A simple script to create boilerplate template files
 
 ## How to use
-- Ensure you are running python v3. If not installed can find installs below:
+- Ensure you are running python v3. Otherwise use one of the install methods below:
   - Anaconda](https://www.anaconda.com/)
   - (Homebrew)[https://formulae.brew.sh/formula/python@3.9]
 - Clone this repository
