@@ -1,12 +1,9 @@
-import React from 'react';
-import styles from "./BaseTemplate.module.scss";
+import React from "react";
 
 export interface BaseTemplateProps {
-    
+    className?: string;
 }
 
-export default function BaseTemplate({}: BaseTemplateProps) {
-  return (
-    <div>BaseTemplate</div>
-  )
+export default function BaseTemplate({className}: BaseTemplateProps) {
+    return <div className={className}>BaseTemplate</div>;
 }
